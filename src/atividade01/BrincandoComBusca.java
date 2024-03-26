@@ -9,7 +9,7 @@ public class BrincandoComBusca {
 		Busca_IF b = new Busca();
 		final int numeroParaBuscar = -1; 
 		
-		final int[] vetor1000 = b.geraVetorNumericoOrdenado(10000000);
+		final int[] vetor1000 = b.geraVetorNumericoOrdenado(10000);
 		
 		//o de cima ta feito
 		
@@ -44,8 +44,12 @@ public class BrincandoComBusca {
 		*/
 	}
 	
-	public static double getSeconds(long nanoTime) {
+	/*public static double getSeconds(long nanoTime) {
 		return nanoTime/1000000000.0;
+	}*/
+	
+	public static long getSeconds(long nanoTime) {
+		return nanoTime;
 	}
 
 

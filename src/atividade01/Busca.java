@@ -21,16 +21,21 @@ public class Busca implements Busca_IF {
 
 	@Override
 	public boolean buscaLinear_recursiva(int[] numeros, int k) {
-		
-		return false;
+		return buscaLinearRecursiva(numeros, k, 0);
+	}
+	
+	private boolean buscaLinearRecursiva(int[] numeros, int num, int i) {
+		if(i == numeros.length) return false;
+		if(num == numeros[i]) return true;
+		return buscaLinearRecursiva(numeros,num,i+1);
 	}
 
 	@Override
 	public boolean buscaLinear_iterativa_duasPontas(int[] numeros, int k) {
-		int N = numeros.length/2;
-		if(numeros.length % 2 != 0) N++;
-		for(int i = 0; i<N; i++) {
-			if(numeros[i] == k && numeros[N-1-i] == k) {
+		int tam = numeros.length/2;
+		if(numeros.length % 2 != 0) tam++;
+		for(int i = 0; i<tam; i++) {
+			if(numeros[i] == k || numeros[tam-1-i] == k) {
 				return true;
 			}
 		}
