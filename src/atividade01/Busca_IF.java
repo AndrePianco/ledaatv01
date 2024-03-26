@@ -1,4 +1,4 @@
-package main;
+package atividade01;
 
 /*
  * Interface para implementação da classe "Busca".
